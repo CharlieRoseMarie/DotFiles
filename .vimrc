@@ -5,13 +5,25 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-dispatch'
-Bundle 'OmniSharp/omnisharp-vim'
-Plugin 'junegunn/fzf.vim'
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'junegunn/fzf'
 Plugin 'scrooloose/nerdtree'
 Plugin 'https://github.com/airblade/vim-gitgutter.git'
+Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 syntax on
 filetype plugin indent on
 set nu
 set updatetime=100
 set clipboard=unnamed
+let g:OmniSharp_server_stdio = 1
+let g:OmniSharp_server_use_mono = 1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
