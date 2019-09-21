@@ -1,0 +1,11 @@
+[user]
+	name = Charlotte Allen
+	email = CharlotteRMAllen@gmail.com
+[commit]
+	gpgsign = true
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[push]
+	default = current
