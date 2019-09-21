@@ -10,6 +10,8 @@ Plugin 'junegunn/fzf'
 Plugin 'scrooloose/nerdtree'
 Plugin 'https://github.com/airblade/vim-gitgutter.git'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'jiangmiao/auto-pairs'
 call vundle#end()
 syntax on
 filetype plugin indent on
