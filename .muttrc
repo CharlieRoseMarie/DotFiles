@@ -14,7 +14,7 @@ set ssl_force_tls = yes
 
 # G to get mail
 bind index G imap-fetch-mail
-set editor = "vim"
+set editor = "vim -c 'set spell spelllang=en'"
 set charset = "utf-8"
 set record = ''
 auto_view text/html
