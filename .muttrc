@@ -1,0 +1,21 @@
+set realname = "Charlotte Allen"
+set from = "takev.takev@gmail.com"
+set use_from = yes
+set envelope_from = yes
+
+source ".privateConfig/mutt/password"
+set smtp_url = "smtps://takev.takev@gmail.com@smtp.gmail.com:465/"
+set smtp_pass = $my_pass
+set imap_user = "takev.takev@gmail.com"
+set imap_pass = $my_pass
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+# G to get mail
+bind index G imap-fetch-mail
+set editor = "vim"
+set charset = "utf-8"
+set record = ''
+auto_view text/html
+set edit_headers=yes
