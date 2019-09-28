@@ -12,6 +12,8 @@ Plugin 'https://github.com/airblade/vim-gitgutter.git'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'venantius/vim-cljfmt'
+Plugin 'dracula/vim'
 call vundle#end()
 syntax on
 filetype plugin indent on
@@ -29,3 +31,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+color dracula
+
+let g:syntastic_lua_checkers = ["luac", "luacheck"]
+let g:syntastic_lua_luacheck_args = "--no-unused-args --codes" 
+noremap -n :lnext<CR>
+noremap -p :lprev<CR>
