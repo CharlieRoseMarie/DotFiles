@@ -37,3 +37,5 @@ let g:syntastic_lua_checkers = ["luac", "luacheck"]
 let g:syntastic_lua_luacheck_args = "--no-unused-args --codes" 
 noremap -n :lnext<CR>
 noremap -p :lprev<CR>
+
+nnoremap <F5> :set rnu!<CR>
