@@ -14,6 +14,9 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'venantius/vim-cljfmt'
 Plugin 'dracula/vim'
+Plugin 'https://github.com/vim-scripts/paredit.vim'
+Plugin 'https://github.com/kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-fireplace'
 call vundle#end()
 syntax on
 filetype plugin indent on
