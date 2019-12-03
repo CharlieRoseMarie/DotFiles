@@ -17,5 +17,10 @@ bind index G imap-fetch-mail
 set editor = "vim -c 'set spell spelllang=en'"
 set charset = "utf-8"
 set record = ''
+set sleep_time = 0
 auto_view text/html
+alternative_order text/plain text/enriched text/html
+bind attach <return>    view-mailcap
 set edit_headers=yes
+set fast_reply=yes
+set include=yes

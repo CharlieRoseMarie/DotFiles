@@ -42,3 +42,4 @@ noremap -n :lnext<CR>
 noremap -p :lprev<CR>
 
 nnoremap <F5> :set rnu!<CR>
+nnoremap <F12> :NERDTreeToggle<CR>
