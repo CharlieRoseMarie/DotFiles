@@ -11,7 +11,9 @@ set imap_pass = $my_pass
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
 set ssl_force_tls = yes
-
+set trash = "imaps://imap.gmail.com/[Gmail]/Trash"
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
 # G to get mail
 bind index G imap-fetch-mail
 set editor = "vim -c 'set spell spelllang=en'"
@@ -22,5 +24,5 @@ auto_view text/html
 alternative_order text/plain text/enriched text/html
 bind attach <return>    view-mailcap
 set edit_headers=yes
-set fast_reply=yes
+#set fast_reply=yes
 set include=yes
