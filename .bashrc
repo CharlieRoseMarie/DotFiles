@@ -130,7 +130,7 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 fi
 
 complete -cf sudo
-if type "$neofetch" &> /dev/null; then
+if command -v "neofetch" &> /dev/null; then
     neofetch
 fi
 
