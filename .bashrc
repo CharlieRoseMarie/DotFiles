@@ -120,6 +120,9 @@ alias soundon='pacmd set-card-profile bluez_card.74_5C_4B_6D_11_F0 a2dp_sink'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 if [ -d "$HOME/bin" ] ; then
 	export PATH="$HOME/bin:$PATH"
+	if [-f "$HOME/bin/tmux-completion/tmux" ] ; then
+		source  ~/bin/tmux-completion/tmux
+	fi
 fi
 
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
@@ -127,6 +130,5 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 fi
 
 complete -cf sudo
-source  ~/bin/tmux-completion/tmux
 neofetch
 
