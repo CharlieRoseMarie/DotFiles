@@ -3,7 +3,7 @@
 	email = CharlotteRMAllen@gmail.com
 	signingkey = 5CE753B4
 [commit]
-	gpgsign = true
+	gpgsign = false
 [core]
 	editor = vim
 [merge]

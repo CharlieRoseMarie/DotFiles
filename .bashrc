@@ -129,9 +129,13 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
 
+export PATH=$PATH:/home/charlotte/.local/bin
+
 complete -cf sudo
 if command -v "neofetch" &> /dev/null; then
     neofetch
 fi
 
-
+if which ruby >/dev/null && which gem >/dev/null; then
+	PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi

@@ -2,6 +2,7 @@ set realname = "Charlotte Allen"
 set from = "takev.takev@gmail.com"
 set use_from = yes
 set envelope_from = yes
+set mailcap_path = ~/.mutt/mailcap
 
 source ".privateConfig/mutt/password"
 set smtp_url = "smtps://takev.takev@gmail.com@smtp.gmail.com:465/"
@@ -20,9 +21,17 @@ set editor = "vim -c 'set spell spelllang=en'"
 set charset = "utf-8"
 set record = ''
 set sleep_time = 0
-auto_view text/html
-alternative_order text/plain text/enriched text/html
+auto_view text/html application/text application/pdf
+alternative_order text/enriched text/html text/plain text
 bind attach <return>    view-mailcap
 set edit_headers=yes
-#set fast_reply=yes
+set fast_reply=yes
 set include=yes
+ignore *
+unignore from date subject to cc
+unignore organization organization x-mailer: x-newsreader: x-mailing-list:
+unignore posted-to:
+
+set query_command="goobook query '%s'"
+macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
+bind editor <Tab> complete-query
