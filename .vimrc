@@ -1,25 +1,27 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+	  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+	      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-dispatch'
-Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'junegunn/fzf'
-Plugin 'scrooloose/nerdtree'
-Plugin 'https://github.com/airblade/vim-gitgutter.git'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'venantius/vim-cljfmt'
-Plugin 'dracula/vim'
-Plugin 'https://github.com/vim-scripts/paredit.vim'
-Plugin 'https://github.com/kien/rainbow_parentheses.vim'
-Plugin 'tpope/vim-fireplace'
-call vundle#end()
-syntax on
-filetype plugin indent on
+call plug#begin('~/.vim/plugged')
+Plug 'VundleVim/Vundle.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dispatch'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'junegunn/fzf'
+Plug 'scrooloose/nerdtree'
+Plug 'https://github.com/airblade/vim-gitgutter.git'
+Plug 'vim-syntastic/syntastic'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'jiangmiao/auto-pairs'
+Plug 'venantius/vim-cljfmt'
+Plug 'dracula/vim'
+Plug 'https://github.com/vim-scripts/paredit.vim'
+Plug 'https://github.com/kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-fireplace'
+Plug 'dsawardekar/wordpress.vim'
+call plug#end()
 set nu
 set updatetime=100
 set clipboard=unnamed
