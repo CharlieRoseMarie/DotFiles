@@ -9,18 +9,18 @@ Plug 'VundleVim/Vundle.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'junegunn/fzf'
-Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'vim-syntastic/syntastic'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe', {'do': './install.py --clang-complete --ts-completer', 'for': ['clang', 'rust', 'typescript']}
 Plug 'jiangmiao/auto-pairs'
 Plug 'venantius/vim-cljfmt'
 Plug 'dracula/vim'
 Plug 'https://github.com/vim-scripts/paredit.vim'
 Plug 'https://github.com/kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-fireplace'
-Plug 'dsawardekar/wordpress.vim'
+Plug 'dsawardekar/wordpress.vim', {'for': 'php'} | Plug 'shawncplus/phpcomplete.vim'
 call plug#end()
 set nu
 set updatetime=100
@@ -45,3 +45,6 @@ noremap -p :lprev<CR>
 
 nnoremap <F5> :set rnu!<CR>
 nnoremap <F12> :NERDTreeToggle<CR>
+
+set textwidth=0
+set wrap
