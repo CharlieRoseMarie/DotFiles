@@ -21,6 +21,7 @@ Plug 'https://github.com/vim-scripts/paredit.vim'
 Plug 'https://github.com/kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-fireplace'
 Plug 'dsawardekar/wordpress.vim', {'for': 'php'} | Plug 'shawncplus/phpcomplete.vim'
+Plug 'jreybert/vimagit'
 call plug#end()
 set nu
 set updatetime=100
@@ -40,11 +41,14 @@ color dracula
 
 let g:syntastic_lua_checkers = ["luac", "luacheck"]
 let g:syntastic_lua_luacheck_args = "--no-unused-args --codes" 
-noremap -n :lnext<CR>
-noremap -p :lprev<CR>
+noremap <leader>n :lnext<CR>
+noremap <leader>p :lprev<CR>
 
 nnoremap <F5> :set rnu!<CR>
 nnoremap <F12> :NERDTreeToggle<CR>
 
 set textwidth=0
 set wrap
+set updatetime=250
+
+nnoremap <leader>gs :Magit<CR>
