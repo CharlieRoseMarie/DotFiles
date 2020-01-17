@@ -22,6 +22,9 @@ Plug 'https://github.com/kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-fireplace'
 Plug 'dsawardekar/wordpress.vim', {'for': 'php'} | Plug 'shawncplus/phpcomplete.vim'
 Plug 'jreybert/vimagit'
+Plug 'elzr/vim-json', {'for': 'json'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 set nu
 set updatetime=100
