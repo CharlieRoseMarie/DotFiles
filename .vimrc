@@ -5,7 +5,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 set nocompatible
 call plug#begin('~/.vim/plugged')
-Plug 'VundleVim/Vundle.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
 Plug 'OmniSharp/omnisharp-vim'
@@ -25,10 +24,12 @@ Plug 'jreybert/vimagit'
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'danielmiessler/VimBlog'
+Plug 'tpope/vim-sexp-mappings-for-regular-people' | Plug 'guns/vim-sexp' | Plug 'tpope/vim-repeat' | Plug 'tpope/vim-surround'
 call plug#end()
 set nu
 set updatetime=100
-set clipboard=unnamed
+set clipboard=unnamedplus
 let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_server_use_mono = 1
 
@@ -55,3 +56,5 @@ set wrap
 set updatetime=250
 
 nnoremap <leader>gs :Magit<CR>
+nnoremap <leader>E :%Eval<CR>
+nnoremap <leader>e :Eval<CR>
