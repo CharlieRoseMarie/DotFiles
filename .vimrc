@@ -50,6 +50,7 @@ noremap <leader>p :lprev<CR>
 
 nnoremap <F5> :set rnu!<CR>
 nnoremap <F12> :NERDTreeToggle<CR>
+nnoremap <F11> :setlocal spell! spelllang=en_us<CR>
 
 set textwidth=0
 set wrap
