@@ -1,0 +1,7 @@
+bind attach <return>    view-mailcap
+
+bind pager j next-line
+bind pager k previous-line
+
+
+bind index G imap-fetch-mail

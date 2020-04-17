@@ -1,7 +1,6 @@
-text/html;  /usr/bin/firefox %s >/dev/null 2>&1; needsterminal;
-# text/html; firefox -new-tab %s & sleep 5; test=........
-text/html; /usr/bin/w3m -dump -s -o display_link=yes -o display_link_number=yes -o decode_url=yes -T text/html -I %{charset}; copiousoutput; description=HTML Text
+text/html; surf '%s'; nametemplate=%s.html 
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+application/pdf; zathura %s; nametemplate=%s.pdf;
 application/pdf; pdftotext '%s' -; copiousoutput; description=PDF Document; nametemplate=%s.pdf
 application/msword; antiword '%s'; copiousoutput; description=Word Document; nametemplate=%s.doc
-image/jpeg; feh -Z %s;
-image/png; feh -Z %s;
+image/*; feh -Z %s;

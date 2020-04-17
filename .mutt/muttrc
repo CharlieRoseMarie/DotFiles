@@ -16,24 +16,33 @@ set trash = "imaps://imap.gmail.com/[Gmail]/Trash"
 set record = "+[Gmail]/Sent Mail"
 set postponed = "+[Gmail]/Drafts"
 # G to get mail
-bind index G imap-fetch-mail
 set editor = "vim -c 'set spell spelllang=en' -c 'set syntax=mail ft=mail enc=utf-8'"
 set menu_scroll=yes
 mailboxes "="
 set header_cache=/var/tmp/.mutt
 set charset = "utf-8"
 set sleep_time = 0
-auto_view text/html application/text application/pdf image/png image/jpeg
-alternative_order text/enriched text/html text/plain text
-bind attach <return>    view-mailcap
+alternative_order text/plain text/enriched text/html
 set edit_headers=yes
 set fast_reply=yes
 set include=yes
-ignore *
-unignore from date subject to cc
-unignore organization organization x-mailer: x-newsreader: x-mailing-list:
-unignore posted-to:
 
 set query_command="goobook query '%s'"
 macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
 bind editor <Tab> complete-query
+
+alternates CharlotteRMAllen@gmail.com
+
+
+source ~/.mutt/auto_views                 # Define auto_views.
+source ~/.mutt/aliases                    # Load in my aliases.
+source ~/.mutt/subscriptions              # Define the list of subscribed mailing lists.
+source ~/.mutt/mailboxes                  # Define the list of folders that receive mail.
+source ~/.mutt/headers                    # Configure header display.
+source ~/.mutt/folder-hooks               # Define folder-hooks.
+source ~/.mutt/save-hooks                 # Define save-hooks.
+source ~/.mutt/fcc-hooks                  # Define fcc-hooks.
+source ~/.mutt/message-hooks              # Define message hooks.
+source ~/.mutt/bindings                   # Define key bindings.
+source ~/.mutt/macros                     # Define macros.
+source ~/.mutt/colors                     # Define colours.
