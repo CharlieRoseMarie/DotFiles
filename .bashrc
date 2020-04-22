@@ -133,7 +133,7 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
 
-export PATH=$PATH:/home/charlotte/.local/bin
+export PATH=$PATH:/home/charlotte/.local/bin:$HOME/go/bin
 
 complete -cf sudo
 if command -v "neofetch" &> /dev/null; then
