@@ -26,6 +26,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'danielmiessler/VimBlog'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' | Plug 'guns/vim-sexp' | Plug 'tpope/vim-repeat' | Plug 'tpope/vim-surround'
+Plug 'fatih/vim-go'
 call plug#end()
 set nu
 set updatetime=100
