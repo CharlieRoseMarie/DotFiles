@@ -1,24 +1,16 @@
 set realname = "Charlotte Allen"
-set from = "takev.takev@gmail.com"
 set use_from = yes
+source "~/.mutt/accounts/personal"
+set mbox_type=Maildir
+set folder="~/Mail"
 set envelope_from = yes
 set mailcap_path = ~/.mutt/mailcap
-
-source "~/.privateConfig/mutt/password"
-set smtp_url = "smtps://takev.takev@gmail.com@smtp.gmail.com:465/"
-set smtp_pass = $my_pass
-set imap_user = "takev.takev@gmail.com"
-set imap_pass = $my_pass
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
+set spoolfile = "+Personal/INBOX"
 set ssl_force_tls = yes
-set trash = "imaps://imap.gmail.com/[Gmail]/Trash"
-set record = "+[Gmail]/Sent Mail"
-set postponed = "+[Gmail]/Drafts"
 # G to get mail
 set editor = "vim -c 'set spell spelllang=en' -c 'set syntax=mail ft=mail enc=utf-8'"
 set menu_scroll=yes
-mailboxes "="
+#mailboxes "="
 set header_cache=/var/tmp/.mutt
 set charset = "utf-8"
 set sleep_time = 0
@@ -26,12 +18,14 @@ alternative_order text/plain text/enriched text/html
 set edit_headers=yes
 set fast_reply=yes
 set include=yes
+set sort="threads"
+set strict_threads="yes"
 
 set query_command="goobook query '%s'"
 macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
 bind editor <Tab> complete-query
 
-alternates CharlotteRMAllen@gmail.com
+# alternates CharlotteRMAllen@gmail.com
 
 
 source ~/.mutt/auto_views                 # Define auto_views.
@@ -46,3 +40,4 @@ source ~/.mutt/message-hooks              # Define message hooks.
 source ~/.mutt/bindings                   # Define key bindings.
 source ~/.mutt/macros                     # Define macros.
 source ~/.mutt/colors                     # Define colours.
+#source ~/.mutt/sidebar

@@ -1,4 +1,5 @@
 auto_view text/html
 auto_view application/text 
 auto_view application/pdf 
-auto_view image/* 
+auto_view image/png
+auto_view text/calendar application/ics

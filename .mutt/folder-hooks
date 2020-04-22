@@ -1,0 +1,2 @@
+folder-hook Personal/* source ~/.mutt/accounts/personal
+folder-hook Work/*     source ~/.mutt/accounts/work

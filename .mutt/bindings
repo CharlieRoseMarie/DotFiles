@@ -4,4 +4,5 @@ bind pager j next-line
 bind pager k previous-line
 
 
-bind index G imap-fetch-mail
+#bind index G imap-fetch-mail
+bind index,pager B sidebar-toggle-visible

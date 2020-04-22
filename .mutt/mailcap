@@ -1,6 +1,10 @@
 text/html; surf '%s'; nametemplate=%s.html 
-text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/html; w3m -dump -o -document_charset=%{charset} %s; nametemplate=%s.html; copiousoutput; needsterminal
+text/plain; vim -R '%s';
 application/pdf; zathura %s; nametemplate=%s.pdf;
 application/pdf; pdftotext '%s' -; copiousoutput; description=PDF Document; nametemplate=%s.pdf
 application/msword; antiword '%s'; copiousoutput; description=Word Document; nametemplate=%s.doc
-image/*; feh -Z %s;
+image/png; feh -Z %s;
+image/png; image2ascii -f '%s'; copiousoutput; nametemplate=%s.png
+text/calendar; mutt-ics; copiousoutput;
+application/ics; mutt-ics; copiousoutput;
