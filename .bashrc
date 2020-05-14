@@ -145,3 +145,4 @@ if which ruby >/dev/null && which gem >/dev/null; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export SCIPY_PIL_IMAGE_VIEWER=feh
