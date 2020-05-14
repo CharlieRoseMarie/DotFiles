@@ -21,12 +21,14 @@ Plug 'https://github.com/kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-fireplace'
 Plug 'dsawardekar/wordpress.vim', {'for': 'php'} | Plug 'shawncplus/phpcomplete.vim'
 Plug 'jreybert/vimagit'
+Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'danielmiessler/VimBlog'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' | Plug 'guns/vim-sexp' | Plug 'tpope/vim-repeat' | Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 set nu
 set updatetime=100
