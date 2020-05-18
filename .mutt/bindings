@@ -6,3 +6,6 @@ bind pager k previous-line
 
 #bind index G imap-fetch-mail
 bind index,pager B sidebar-toggle-visible
+bind index,pager J sidebar-next
+bind index,pager K sidebar-prev
+bind index,pager \CO sidebar-open
