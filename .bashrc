@@ -8,6 +8,8 @@ case $- in
       *) return;;
 esac
 
+GPG_TTY=$(tty)
+export GPG_TTY
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -105,6 +107,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+
 export BORG_UNKNOWN_UNENCRYPTED_REPO_ACCESS_IS_OK=yes
 export BORG_REPO='charlotte@charlotteallen.info:/mnt/volume_sfo2_01/backup'
 export TUIR_BROWSER='firefox'
@@ -122,27 +125,19 @@ fi
 
 alias soundon='pacmd set-card-profile bluez_card.74_5C_4B_6D_11_F0 a2dp_sink'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-if [ -d "$HOME/bin" ] ; then
-	export PATH="$HOME/bin:$PATH"
-	if [ -f "$HOME/bin/tmux-completion/tmux" ] ; then
-		source  ~/bin/tmux-completion/tmux
-	fi
-fi
 
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
 
-export PATH=$PATH:/home/charlotte/.local/bin:$HOME/go/bin
 
 complete -cf sudo
 if command -v "neofetch" &> /dev/null; then
     neofetch
 fi
 
-if which ruby >/dev/null && which gem >/dev/null; then
-	PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
-fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export SCIPY_PIL_IMAGE_VIEWER=feh
+
+source $HOME/.profile
