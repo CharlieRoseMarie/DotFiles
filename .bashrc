@@ -140,4 +140,7 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export SCIPY_PIL_IMAGE_VIEWER=feh
 
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 source $HOME/.profile

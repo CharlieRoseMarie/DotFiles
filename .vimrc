@@ -12,7 +12,8 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'vim-syntastic/syntastic'
-Plug 'ycm-core/YouCompleteMe', {'do': './install.py --clang-complete --ts-completer', 'for': ['clang', 'rust', 'typescript']}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'venantius/vim-cljfmt'
 Plug 'dracula/vim'
@@ -44,6 +45,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:fzf_tags_command = 'ctags -R'
+
+" Insert mode completion
+" imap <c-p> <plug>(fzf-complete-word)
+
 color dracula
 
 let g:syntastic_lua_checkers = ["luac", "luacheck"]
@@ -54,6 +60,8 @@ noremap <leader>p :lprev<CR>
 nnoremap <F5> :set rnu!<CR>
 nnoremap <F12> :NERDTreeToggle<CR>
 nnoremap <F11> :setlocal spell! spelllang=en_us<CR>
+nnoremap <C-F> :Files .<CR>
+nmap <F8> :TagbarToggle<CR>
 
 set textwidth=0
 set wrap
@@ -62,3 +70,5 @@ set updatetime=250
 nnoremap <leader>gs :Magit<CR>
 nnoremap <leader>E :%Eval<CR>
 nnoremap <leader>e :Eval<CR>
+
+autocmd FileType vim let b:vcm_tab_complete = 'omni'
