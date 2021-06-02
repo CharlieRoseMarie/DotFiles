@@ -15,11 +15,11 @@ Plug 'vim-syntastic/syntastic'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
-Plug 'venantius/vim-cljfmt'
+Plug 'venantius/vim-cljfmt', {'for': 'clojure'} 
 Plug 'dracula/vim'
 Plug 'https://github.com/vim-scripts/paredit.vim'
 Plug 'https://github.com/kien/rainbow_parentheses.vim'
-Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fireplace' | Plug 'clojure-vim/vim-cider'
 Plug 'dsawardekar/wordpress.vim', {'for': 'php'} | Plug 'shawncplus/phpcomplete.vim'
 Plug 'jreybert/vimagit'
 Plug 'stephpy/vim-yaml'
@@ -27,7 +27,7 @@ Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'danielmiessler/VimBlog'
-Plug 'tpope/vim-sexp-mappings-for-regular-people' | Plug 'guns/vim-sexp' | Plug 'tpope/vim-repeat' | Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sexp-mappings-for-regular-people', {'for': 'clojure'} | Plug 'guns/vim-sexp', {'for': 'clojure'}  | Plug 'tpope/vim-repeat' | Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
 Plug 'vimwiki/vimwiki'
 call plug#end()
@@ -72,3 +72,4 @@ nnoremap <leader>E :%Eval<CR>
 nnoremap <leader>e :Eval<CR>
 
 autocmd FileType vim let b:vcm_tab_complete = 'omni'
+let tlist_clojure_settings = 'lisp;f:function'

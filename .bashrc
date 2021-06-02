@@ -109,7 +109,8 @@ fi
 
 
 export BORG_UNKNOWN_UNENCRYPTED_REPO_ACCESS_IS_OK=yes
-export BORG_REPO='charlotte@charlotteallen.info:/mnt/volume_sfo2_01/backup'
+export BORG_REPO='1032@usw-s001.rsync.net:borg-backup'
+export BBORG_PASSCOMMAND='pass show borg-backup'
 export TUIR_BROWSER='firefox'
 
 # enable programmable completion features (you don't need to enable
