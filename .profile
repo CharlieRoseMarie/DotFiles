@@ -1,5 +1,3 @@
-
-
 if [ -d "$HOME/bin" ] ; then
 	export PATH="$HOME/bin:$PATH"
 	if [ -f "$HOME/bin/tmux-completion/tmux" ] ; then

@@ -108,9 +108,6 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 
-export BORG_UNKNOWN_UNENCRYPTED_REPO_ACCESS_IS_OK=yes
-export BORG_REPO='1032@usw-s001.rsync.net:borg-backup'
-export BBORG_PASSCOMMAND='pass show borg-backup'
 export TUIR_BROWSER='firefox'
 
 # enable programmable completion features (you don't need to enable
